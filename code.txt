@@ -1,0 +1,56 @@
+int sensor1 = 2;
+int sensor2 = 3; 
+int sensor3 = 4;
+int sensor4 = 5;
+int relay1 = 6;
+int relay2 = 7;
+int relay3 = 8;
+int relay4 = 9; 
+int val1,val2,val3,val4; 
+void setup() {
+pinMode(relay1,OUTPUT); 
+pinMode(sensor1,INPUT); 
+pinMode(relay2,OUTPUT);
+pinMode(sensor2,INPUT);
+pinMode(relay3,OUTPUT);
+pinMode(sensor3,INPUT);
+pinMode(relay4, OUTPUT);
+pinMode(sensor4,INPUT);
+}
+
+void loop() { 
+  val1 = digitalRead(sensor1); 
+if(val1 == LOW) 
+  {
+digitalWrite(relay1,HIGH); 
+  }
+  else
+  {
+digitalWrite(relay1,LOW); 
+  }
+  val2 = digitalRead(sensor2);
+if(val2 == LOW){
+digitalWrite(relay2,HIGH); 
+  }
+else{
+digitalWrite(relay2,LOW);
+  }
+    val3 = digitalRead(sensor3); 
+if(val3 == LOW) 
+  {
+digitalWrite(relay3,HIGH); 
+  }
+  else
+  {
+digitalWrite(relay3,LOW); 
+  }
+    val4 = digitalRead(sensor4); 
+if(val4 == LOW) 
+  {
+digitalWrite(relay4,HIGH); 
+  }
+  else
+  {
+digitalWrite(relay4,LOW); 
+  } 
+}
